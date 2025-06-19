@@ -1,1 +1,40 @@
-site_name: My Docs
+site_name: Pokemon API Docs
+site_description: Documentation for Pokemon API, a RESTful API for Pokemon data and battles.
+site_author: Pokemon API Team
+
+theme:
+  name: material
+  language: es
+  palette:
+    primary: yellow
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+nav:
+  - Inicio: index.md
+  - Guía:
+      - Inicio Rápido: guia/inicio.md
+      - Autenticación: guia/autenticacion.md
+      - Endpoints: guia/endpoints.md
+  - API:
+      - Pokemon: api/pokemon.md
+      - Batallas: api/batallas.md
+      - Entrenadores: api/entrenadores.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: "#"
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
